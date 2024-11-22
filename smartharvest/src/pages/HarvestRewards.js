@@ -1,6 +1,6 @@
 // src/HarvestRewards.js
 import React from "react";
-import "../HarvestRewards.css";
+import "./HarvestRewards.css";
 
 const HarvestRewards = () => {
   return (
@@ -10,7 +10,10 @@ const HarvestRewards = () => {
         <div className="container">
           <h1 className="title">Harvest Rewards</h1>
           <p className="subtitle">
-            Get the inside scoop. Join for <span className="highlight">free</span> and <span className="highlight">earn points</span> while enjoying special perks, tailored to you.
+            Get the inside scoop. Join for{" "}
+            <span className="highlight">free</span> and{" "}
+            <span className="highlight">earn points</span> while enjoying
+            special perks, tailored to you.
           </p>
         </div>
       </section>
@@ -23,19 +26,28 @@ const HarvestRewards = () => {
             <div className="col-md-4">
               <div className="benefit-item">
                 <h5>Step 1: Sign Up</h5>
-                <p>Sign up for free and earn points that can be exchanged for exclusive benefits.</p>
+                <p>
+                  Sign up for free and earn points that can be exchanged for
+                  exclusive benefits.
+                </p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="benefit-item">
                 <h5>Step 2: Earn Points</h5>
-                <p>Earn points when placing an order, or when completing achievements.</p>
+                <p>
+                  Earn points when placing an order, or when completing
+                  achievements.
+                </p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="benefit-item">
                 <h5>Step 3: Redeem Rewards</h5>
-                <p>Redeem your points for discounts and benefits, and reach higher tiers for extra rewards.</p>
+                <p>
+                  Redeem your points for discounts and benefits, and reach
+                  higher tiers for extra rewards.
+                </p>
               </div>
             </div>
           </div>
@@ -45,7 +57,8 @@ const HarvestRewards = () => {
       {/* Earn Points Section */}
       <section className="earn-points-section py-5">
         <div className="container text-center">
-          <h2 className="other-ways-section-title">EARN POINTS</h2> {/* Updated class for styling */}
+          <h2 className="other-ways-section-title">EARN POINTS</h2>{" "}
+          {/* Updated class for styling */}
           <div className="rectangle">
             <div className="row justify-content-center">
               <div className="col-md-4">
@@ -67,7 +80,9 @@ const HarvestRewards = () => {
             <div className="col-md-4">
               <div className="benefit-item">
                 <h5>Refer a Friend</h5>
-                <p>Earn points by inviting friends to join the rewards program.</p>
+                <p>
+                  Earn points by inviting friends to join the rewards program.
+                </p>
               </div>
             </div>
             <div className="col-md-4">
@@ -91,7 +106,8 @@ const HarvestRewards = () => {
         <div className="container text-center">
           <h2 className="section-title">Redeem Your Points</h2>
           <p className="subtitle">
-            Use your points to unlock exciting rewards! Select from the options below and start redeeming today.
+            Use your points to unlock exciting rewards! Select from the options
+            below and start redeeming today.
           </p>
           <div className="row">
             <div className="col-md-4">

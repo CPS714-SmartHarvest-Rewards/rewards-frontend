@@ -3,27 +3,69 @@ import { API_BASE_URL } from "../../constants";
 
 const ListRewards = () => {
   const [rewards, setRewards] = useState([]);
-  const [error, setError] = useState("");
+  const [userId, setUserId] = useState("");
+  const [selectedRewardId, setSelectedRewardId] = useState(null);
+  const [message, setMessage] = useState("");
 
+  // Fetch rewards from the backend
   useEffect(() => {
     fetch(`${API_BASE_URL}/rewards/`)
       .then((response) => response.json())
-      .then(setRewards)
-      .catch((err) => setError("Failed to fetch rewards."));
+      .then((data) => setRewards(data))
+      .catch((error) => setMessage("Failed to fetch rewards."));
   }, []);
+
+  // Redeem Reward Handler
+  const handleRedemption = (rewardId) => {
+    if (!userId) {
+      setMessage("Incorrect Redemption, please ensure you are logged in!");
+      return;
+    }
+
+    fetch(`${API_BASE_URL}/loyalty/redeem/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ user_id: parseInt(userId), reward_id: rewardId }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.error) {
+          setMessage(data.error);
+        } else {
+          setMessage("Reward redeemed successfully!");
+        }
+      })
+      .catch(() => setMessage("An error occurred while redeeming the reward."));
+  };
 
   return (
     <div>
       <h2>Available Rewards</h2>
-      {<p>{error}</p>}
+      <div>
+        <label>
+          Enter User ID:
+          <input
+            type="text"
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
+          />
+        </label>
+      </div>
       <ul>
         {rewards.map((reward) => (
           <li key={reward.reward_id}>
-            <strong>{reward.reward_name}</strong>: {reward.reward_description} -
-            {reward.points} points
+            <p><strong>{reward.reward_name}</strong></p>
+            <p>{reward.reward_description}</p>
+            <p>Points: {reward.points}</p>
+            <button onClick={() => handleRedemption(reward.reward_id)}>
+              Redeem Reward
+            </button>
           </li>
         ))}
       </ul>
+     <p>{message}</p>
     </div>
   );
 };

@@ -14,7 +14,7 @@
 
 /* Hero Section */
 .harvest-rewards .hero-section {
-    background: url('hero-bg.png') no-repeat center center/cover;
+    background: url('../hero-bg.png') no-repeat center center/cover;
     padding: 140px 50px;
     color: #ffffff;
     text-align: center;
@@ -73,7 +73,7 @@
 
 /* Earn Points Section */
 .harvest-rewards .earn-points-section {
-    background: url('redeem-bg.jpg') no-repeat center center/cover;
+    background: url('../redeem-bg.jpg') no-repeat center center/cover;
     padding: 80px 20px;
     text-align: center;
     border-radius: 15px;
@@ -94,7 +94,7 @@
 
 /* Redeem Points Section */
 .harvest-rewards .redeem-points-section {
-    background: url('redeem-bg.jpg') no-repeat center center/cover;
+    background: url('../redeem-bg.jpg') no-repeat center center/cover;
     padding: 80px 20px;
     color: #333;
     text-align: center;

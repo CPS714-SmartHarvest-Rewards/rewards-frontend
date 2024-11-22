@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from "../../constants";
 
-const ListOffers = () => {
+const OffersList = () => {
   const [offers, setOffers] = useState([]);
   const [error, setError] = useState("");
 
@@ -28,4 +28,4 @@ const ListOffers = () => {
   );
 };
 
-export default ListOffers;
+export default OffersList;
