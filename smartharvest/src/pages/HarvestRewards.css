@@ -129,6 +129,34 @@
     background-color: #218838;
 }
 
+/* Rewards Dashboard Styling */
+.rewards-dashboard {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .offers-list, .rewards-list {
+    min-height: 200px;
+    background: #f9f9f9;
+  }
+  
+  .offers-section .section-title {
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  .rewards-section .section-title {
+    color: #28a745; /* Bootstrap success color */
+  }
+  
+
 /* Keyframes for Subtle Animations */
 @keyframes fadeInUp {
     from {
