@@ -44,19 +44,24 @@ const ListRewards = () => {
     <div>
       <h2>Available Rewards</h2>
       <div>
-        <label>
-          Enter User ID:
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Enter User ID</span>
+          </div>
           <input
+            class="form-control"
             type="text"
             value={userId}
             onChange={(e) => setUserId(e.target.value)}
           />
-        </label>
+        </div>
       </div>
       <ul>
         {rewards.map((reward) => (
           <li key={reward.reward_id}>
-            <p><strong>{reward.reward_name}</strong></p>
+            <p>
+              <strong>{reward.reward_name}</strong>
+            </p>
             <p>{reward.reward_description}</p>
             <p>Points: {reward.points}</p>
             <button onClick={() => handleRedemption(reward.reward_id)}>
@@ -65,7 +70,7 @@ const ListRewards = () => {
           </li>
         ))}
       </ul>
-     <p>{message}</p>
+      <p>{message}</p>
     </div>
   );
 };
