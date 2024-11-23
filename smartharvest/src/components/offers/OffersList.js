@@ -9,7 +9,7 @@ const OffersList = () => {
     fetch(`${API_BASE_URL}/offers/`)
       .then((response) => response.json())
       .then(setOffers)
-      .catch((err) => setError("No offers available."));
+      .catch((err) => setError("No offers available." + err));
   }, []);
 
   return (
